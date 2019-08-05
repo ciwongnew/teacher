@@ -1,0 +1,12 @@
+.checkboxLabel{
+  .noChooseRom{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url("../../assets/img/noCheck.png") no-repeat;
+    vertical-align: middle;
+  }
+  .chooseRom{
+    background: url("../../assets/img/check.png") no-repeat;
+  }
+}

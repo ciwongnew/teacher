@@ -1,0 +1,366 @@
+.schoolMsg{
+	padding: 0px 20px 40px 20px;
+	margin-top: 40px;
+	.menu{
+		padding-top: 30px;
+    ul li{
+			display: inline-block;
+			text-align: center;
+			width: 144px;
+			cursor: pointer;
+			color: #A6A6A6;
+			padding: 0 15px;
+			border: 1px solid #e6e6e6;
+			background-color: #f4f4f4;
+			padding: 16px 0px;
+			margin-right: -6px;
+    }
+		ul li:last-child{
+			position: relative;
+		}
+    .activeLi{
+			border-top: 4px solid #00BA8F;
+			border-bottom: 0px;
+			background-color: #fff;
+			padding-top: -6px;
+			padding-top: 13px;
+      color: #00BA8F;
+    }
+		.border_line{
+			height: 55px;
+			border: 1px solid #e6e6e6;
+			display: inline-block;
+			width: 635px;
+			/* padding: 16px 0px; */
+			/* margin-top: -114px; */
+			float: right;
+		}
+		.msgPro{
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: #ff762b;
+			display: inline-block;
+			position: absolute;
+			top: -1px;
+			right: 10px;
+		}
+  }
+	.MsgContent{
+		.msg{
+			width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			margin-bottom: 20px;
+			padding: 20px;
+			cursor: pointer;
+			.receiveMsg{
+				.receiveObj,.receiveClass,.receiveTime{
+					width: 80%;
+					font-size: 14px;
+					color: #999;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					&.receiveTime{
+						text-align: right;
+					}
+				}
+				.receiveTime{
+					width: 20%;
+				}
+			}
+		}
+		.loading_books{
+			width: 100%;
+			.load_line{
+				height: 4px;
+				border-top: 1px solid #e6e6e6;
+				border-bottom: 1px solid #e6e6e6;
+			}
+			p{
+				font-size: 14px;
+				text-align: center;
+				margin-top: 20px;
+				color: #666666;
+			}
+		}
+	}
+  .sendBox{
+    padding: 20px 50px 0;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+    .sendMsg{
+      width: 820px;
+      //margin-top: 20px;
+      .message{
+        margin-bottom: 10px;
+        img{
+          float: left;
+          width: 19px;
+          height: 14px;
+          vertical-align: super;
+          margin-right: 10px;
+          margin-top: 3px;
+        }
+        .main_contents{
+          font-size: 14px;
+          line-height: 24px;
+          display: inline-block;
+          cursor: pointer;
+          color: #4c4c4c;
+          width: 700px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .show_contents {
+          overflow: inherit;
+          text-overflow: inherit;
+					white-space: pre-wrap;
+					word-wrap: break-word;
+				}
+        i{
+          color: #00ba8f;
+          font-size: 14px;
+          float: right;
+        }
+      }
+      .sendBtn{
+        width: 150px;
+        height: 50px;
+        border-radius: 23px;
+        margin-bottom: 20px;
+      }
+      .send{
+        //padding: 20px 40px 0px 40px;
+        margin-left: -10px;
+        .step{
+          float: left;
+          font-size: 14px;
+          color: #A1A1A1;
+        }
+
+        .sel_class{
+          width: 560px;
+          border: 1px solid #e6e6e6;
+          float: left;
+          margin-left: 34px;
+          min-height: 50px;
+          padding: 10px;
+          line-height: 28px;
+        }
+        .origin_select {
+          display: inline-block;
+          width: 150px;
+          height: 50px;
+          text-align: left;
+          padding:14px 0 0 4px;
+          //line-height: 50px;
+          border: 1px solid #ccc;
+          margin-left: -1px;
+          background: url("./../../assets/img/arrow-down.png") no-repeat 88%;
+          cursor: pointer;
+          position: relative;
+          &.arrowUp{
+            background: url("./../../assets/img/arrow-up.png") no-repeat 88%;
+          }
+          .selectBox{
+            background: #fff;
+            width: 150px;
+            height: 300px;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 48px;
+            left: -1px;
+            overflow-y: auto;
+            .input{
+              display: block;
+              height: 50px;
+              width: 100%;
+              &:hover{
+                background-color: #eefafa;
+              }
+              .label{
+                color: #1f2d3d;
+                position: relative;
+                cursor: pointer;
+                display: inline-block;
+                white-space: nowrap;
+                //margin: 14px 0 0 4px;
+                display: block;
+                width: 100%;
+                height: 50px;
+                padding: 14px 0 0 4px;
+                .studentName{
+                  padding-left: 8px;
+                  font-size: 14px;
+                  color: #666;
+                  overflow-x: hidden;
+                  text-overflow: ellipsis;
+                  max-width: 104px;
+                  float: left;
+                }
+                .inputBox{
+                  white-space: nowrap;
+                  cursor: pointer;
+                  outline: none;
+                  display: inline-block;
+                  line-height: 1;
+                  position: relative;
+                  vertical-align: middle;
+                  &.isChecked{
+                    .checkBox{
+                      background-color: #00BA8F;
+                      border-color: #00BA8F;
+                      &::after{
+                        transform: rotate(45deg) scaleY(1);
+                      }
+                    }
+                  }
+                  .checkBox{
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #bfcbd9;
+                    position: relative;
+                    box-sizing: border-box;
+                    background-color: #fff;
+                    z-index: 1;
+                    &::after{
+                      box-sizing: content-box;
+                      content: "";
+                      border: 2px solid #fff;
+                      border-left: 0;
+                      border-top: 0;
+                      height: 10px;
+                      top: 2px;
+                      left: 6px;
+                      position: absolute;
+                      transform: rotate(45deg) scaleY(0);
+                      width: 4px;
+                      transform-origin: center;
+                    }
+                  }
+                  input{
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+
+        textarea{
+          width: 707px;
+          height: 390px;
+          margin-left: 22px;
+        }
+        .btn{
+          width: 140px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+        }
+        .write{
+          color: #000000;
+          border-color: #E0E0E0;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+	.acceptMsg{
+		.systemMessagesBGC{
+		  margin-top: 30px;
+			.msg{
+				cursor: pointer;
+				.message{
+					margin-bottom: 10px;
+					p{
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+
+
+						.main_contents{
+							font-size: 14px;
+							display: inline-block;
+							cursor: pointer;
+							color: #4c4c4c;
+							width: 600px;
+							line-height: 24px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+						.show_contents {
+							overflow: inherit;
+		          text-overflow: inherit;
+							white-space: pre-wrap;
+							word-wrap: break-word;
+						}
+						i:first-child{
+							color: #999;
+		          font-size: 14px;
+		          float: left;
+						}
+						i:last-child {
+							float: right;
+							color: #00BA8F;
+						}
+
+					}
+					.title{
+					  text-align: center;
+					  margin-bottom: 10px;
+					  font-size: 14px;
+					  font-weight: bold;
+						.senderInfo{
+						  width: 100%;
+							.TimeBox{
+								width: 85%;
+						    text-align: right;
+						    color: #BABABA;
+						    font-size: 14px;
+						    display: inline-block;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sender{
+		  display: inline-block;
+		  color: #BABABA;
+		  font-size: 14px;
+		}
+
+		.TimeBox{
+		  color: #BABABA;
+		  font-size: 14px;
+		  margin-top: 5px;
+		  display: inline-block;
+			float: right;
+		}
+		.activeMsg{
+			color: #BABABA;
+		}
+	}
+	.paging{
+    font-size: 14px;
+    float: right;
+    line-height: 26px;
+    margin-right: -9px;
+    margin-top: 20px;
+  }
+	.clear:after{
+		content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+	}
+}

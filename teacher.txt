@@ -1,0 +1,22 @@
+teacher
+	----index.html
+	----package.json
+	----webpackage.config.js
+	----src
+		----assets
+			----img
+			----scss
+		----compontents
+		----views
+		----store //存储
+			----index.js
+			----state.js
+			----mutations.js
+			----getter.js
+		----filter //选择器
+			----index.js
+		----unit //公共方法
+			----index.js
+		----App.vue
+		----main.js
+		----router.js

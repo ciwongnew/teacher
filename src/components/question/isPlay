@@ -1,0 +1,220 @@
+<template>
+    <div>
+        <div class="paper-question mt-120" v-if="exampaper">
+            <div class="p-30 bg-fff m-t30" v-for="(part,index) in exampaper.parts">
+                <div v-if="page=='selectListenSpeak'" class="align-r">
+                    <div class="button choice" :class="{checked:selectedExampaperArr.indexOf(index)>-1}" @click="choiceBigQ(index)">选择该题</div>
+                    <!--<div class="button play_button">播放全部音频</div>
+                    <div class="button play_button checked">暂停全部音频</div>-->
+                </div>
+                <div class="m-t10">{{part.module_type_name}}</div>
+                <div class="m-t30" v-for="question in part.children">
+                    <singleChoice   v-if="question.qtype==1" :question="question"></singleChoice>
+                    <multipleChoice v-else-if="question.qtype==2" :question="question"></multipleChoice>
+                    <filling        v-else-if="question.qtype==3" :question="question"></filling>
+                    <judge          v-else-if="question.qtype==4" :question="question"></judge>
+                    <reading        v-else-if="question.qtype==5" :question="question"></reading>
+                    <shortanswer    v-else-if="question.qtype==6" :question="question"></shortanswer>
+                    <imitation      v-else-if="question.qtype==7" :question="question"></imitation>
+                </div>
+            </div>
+        </div>
+        <div class="m-select-question" :class="{relativeBox:barHide}" v-if="page=='selectListenSpeak'">
+            <div class="common-width clearfix">
+                <div class="fl">已选：{{selectedExampaperArr.length || 0}}个大题</div>
+                <div class="fr">
+                    <div class="button write inline-block" onclick="window.history.back()">取消</div>
+                    <div class="button inline-block m-l20" @click="backQuestionArr">确定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    // 试卷
+    import singleChoice from './singleChoice.vue'       // 1单选题
+    import multipleChoice from './multipleChoice.vue'   // 2多选题
+    import filling from './filling.vue'                 // 3填空题
+    import judge from './judge.vue'                     // 4判断题
+    import reading from './reading.vue'                 // 5阅读理解
+    import shortanswer from './shortanswer.vue'         // 6简答题
+    import imitation from './imitation.vue'             // 7模仿朗读or简答题
+    
+    export default {
+        data(){
+            return {
+                exampaper:null,
+                selectedExampaperArr:[],
+                barHide:false
+            }
+        },
+        props:[
+            'page',
+            'exampaperData',    // 试卷
+            'userAnswers',      // 用户答案
+            'showdata'          // 显示的选题
+        ],
+        watch:{
+            barHide(val){
+                this.barHide = val
+            },
+            exampaperData(val){
+                this.exampaperData = val;
+                if(this.page=='selectListenSpeak' || this.page=='selectOnlinePaper'){
+                    this.exampaper = val;
+                }else if(this.userAnswers){
+                    this.mergeAnswerToExampaper()
+                }
+            },
+            userAnswers(val){
+                this.userAnswers = val;
+                if(this.userAnswers && this.exampaperData){
+                    this.mergeAnswerToExampaper()
+                }
+            }
+        },
+        components:{
+            singleChoice,
+            multipleChoice,
+            filling,
+            judge,
+            reading,
+            shortanswer,
+            imitation,
+        },
+        methods:{
+            choiceBigQ(index){
+                var _index = this.selectedExampaperArr.indexOf(index);
+                if(_index>-1){
+                    this.selectedExampaperArr.splice(_index,1)
+                }else{
+                    this.selectedExampaperArr.push(index)
+                }
+            },
+            // 是否包含改大题
+            hasBigQ(index){
+                return this.selectedExampaperArr.indexOf(index)>-1
+            },
+            // 题目数组回传
+            backQuestionArr(){
+                this.$emit('submiteExampaper',this.selectedExampaperArr)
+            },
+            // 合并答案到试卷
+            mergeAnswerToExampaper(){
+                var _this = this;
+//                this.exampaperData = this.showPartList(this.exampaperData,this.showdata)
+                this.exampaperData.parts.map((exampaper)=>{
+                    _this.setUserAnswer(exampaper,_this.userAnswers)
+                    _this.sortAttachments(exampaper)
+                })
+
+                this.exampaper = this.exampaperData;
+            },
+            // --------------------------答案处理函数-----------------------------------------
+            // 只显示老师布置的作业题
+            showPartList:function(result,showdata){
+                if (showdata && showdata.length > 0) {
+                    var _showdata = showdata.split(",");
+                    var arrayObj = new Array(); //创建一个数组
+                    _showdata.forEach((d,i)=>{
+                        var l = result.parts.length - 1;
+                        if (d <= l) {
+                            var ret = result.parts[d];
+                            arrayObj.push(ret);
+                        }
+                    })
+                    var _result = { title: result.title, ref_score: result.ref_score, curriculum_id: result.curriculum_id, parts: arrayObj, id: result.id, version_id: result.version_id };
+                    result = _result;
+                }
+                return result;
+            },
+            // 设置参考答案
+            // answerIdArr:正确答案选项组，options：题目选项
+            setRefAnswer:function(question) {
+                // if(!question) return false;
+                var answerIdArr = question.ref_info.answers
+                var options = question.options
+                var result=[],arr = [];
+                // 选择题答案解析
+                if(question.qtype==1){
+                    for (var i = 0; i < answerIdArr.length; i++) {
+                        for (var j = 0; j < options.length; j++) {
+                            options[j].is_answer = false;
+                            if (options[j].id == answerIdArr[i]) {
+                                options[j].index = j;
+                                options[j].is_answer = true;
+                                arr.push(options[j]);
+                                break;
+                            }
+                        };
+                    }
+                }
+                
+                if(arr != ''){
+                    question.options = options;
+                    question.ref_info.answers = arr;
+                }
+                return question;
+            },
+            // 设置用户答案
+            setUserAnswer:function(questions,userAnswers){
+                var _this = this;
+                if(questions && questions.children){
+                    questions.children = questions.children.map((question)=> {
+                        _this.setRefAnswer(question)
+                        question.userAnswer = _this.findUserAnswer(userAnswers, question.version_id);
+                        question.children && question.children.length > 0 && _this.setUserAnswer(question, userAnswers);
+                    });
+                }
+                return questions;
+            },
+            // 查找对应试卷id用户答案
+            findUserAnswer:function(userAnswers, versionId){
+                var result;
+                userAnswers.forEach((m)=>{
+                   if ( (m.versionId && m.versionId == versionId) || (m.version_id && m.version_id == versionId) ) {
+                      result = m;
+                    }
+                })
+                if (result && !(result.answers instanceof Array) ) {
+                    result.answers = JSON.parse(result.answers);
+                }
+                return result;
+            },
+            // 附件排序
+            sortAttachments:function(questions){
+                questions && questions.children.map((question)=>{
+                    var atta = question.attachments,
+                        audioArr = [],
+                        imgArr = [],
+                        videoArr = [];
+                    for (var i = 0,len=atta.length; i < len; i++) {
+                        if(atta[i].file_type==1) imgArr.push(atta[i])
+                        if(atta[i].file_type==2) audioArr.push(atta[i])
+                        if(atta[i].file_type==3) videoArr.push(atta[i])
+                    }
+                    question.attachments = audioArr.concat(imgArr).concat(videoArr)
+                })
+                return questions;
+            }
+
+        },
+        created(){
+        },
+        mounted(){  // 同v1.*的ready
+
+            // 底部确定取消浮动栏
+            // if(this.page=='selectListenSpeak'){
+            //     var _self = this;
+            //     document.addEventListener('scroll',function(){
+            //         if(_self.page=='selectListenSpeak'){
+            //             var pQuestion = document.querySelector('.paper-question').offsetHeight
+            //             var sQuestion = document.body.scrollTop + window.innerHeight-200
+            //             _self.barHide = sQuestion>pQuestion
+            //         }
+            //     })
+            // }
+        }
+    }
+</script>

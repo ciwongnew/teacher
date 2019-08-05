@@ -1,0 +1,135 @@
+@charset "utf-8";
+@mixin greenCheck{
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  margin-right: 20px;
+  cursor: pointer;
+  &.checked{
+    background: url("./../../assets/img/check.png") no-repeat center;
+    border-color: #00ba8f;
+  }
+  &.chooseSome{
+    background: url("./../../assets/img/chooseSome.png") no-repeat center;
+    border-color: #00ba8f;
+  }
+  @content
+}
+.words{
+    background-color: #fff;
+    margin: auto;
+    .selectWords-title {
+      font: 18px $font-roboto;
+      height: 80px;
+      line-height: 80px;
+      border-bottom: 1px solid #e6e6e6;
+      width: 880px;
+      margin: 0 auto;
+      text-align: center;
+  }
+  .tools{
+    width: 880px;
+    margin: 0 auto;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 30px;
+    .checkKuang{
+      @include greenCheck{
+
+      }
+    }
+  }
+  .main{
+    padding-left: 50px;
+  }
+  .title{
+      font: 18px $font-roboto;
+      margin-top: 44px;
+      text-align: center;
+      width: 204px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+  }
+  .wordsContent{
+      width: 196px;
+      height: 136px;
+      float: left;
+      font: 14px $font-roboto;
+      border: 1px solid $borderColor;
+      margin: 20px 0 20px 20px;
+      position: relative;
+      background: url("../../assets/img/nocheck_state.png") no-repeat;
+      background-position: bottom right;
+      cursor: pointer;
+      &.active{
+        border-color: #00ba8f;
+        background: url("../../assets/img/check_state.png") no-repeat;
+        background-position: bottom right;
+      }
+    .singleChoice{
+      @include greenCheck{
+        position: absolute;
+        top: 50%;
+        margin-top: -9px;
+        left: -32px;
+        margin-right: 0
+      }
+    }
+  }
+  .clear:after{
+      content: ".";
+      height: 0;
+      visibility: hidden;
+      display: block;
+      clear: both;
+  }
+  .play, .pause{
+      margin-top: 50px;
+      margin-left: 20px;
+  }
+  .choose{
+      width: 120px;
+      float: right;
+      margin-top: 20px;
+      margin-right: 42px;
+      button{
+        width: 120px;
+
+      }
+  }
+  .bottomMenu{
+    position: fixed;
+    bottom: 0;
+    width: 960px;
+    overflow: hidden;
+    background-color: #19c19a;
+    line-height: 32px;
+    color: #fff;
+      .bottomMenuBox{
+          width: 960px;
+          margin: 0 auto;
+          height: 60px;
+          line-height: 60px;
+          div{
+            .cancel{
+              color: #fff;
+              width: auto;
+              padding: 0 30px;
+              cursor: pointer;
+            }
+            .confirm{
+              width: auto;
+              margin-left: 20px;
+              background-color: #ff9000;
+              width: 140px;
+              height: 40px;
+              border-radius: 25px;
+              margin-right: 40px;
+            }
+          }
+      }
+  }
+ }

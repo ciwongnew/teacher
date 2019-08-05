@@ -1,0 +1,47 @@
+.setHomework{
+  margin-top: 40px;
+  padding: 30px 40px 30px 40px;
+
+  .title{
+      height: 70px;
+      line-height: 40px;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #e6e6e6;
+      cursor: pointer;
+      .go_back{
+        flex: 1;
+        img{
+          width: 10px;
+          height: 16px;
+          vertical-align: baseline;
+        }
+        span{
+          font-size: 18px;
+          color: #00ba8f;
+        }
+      }
+      .select_book {
+        margin: 0 auto;
+        h2{
+          font-size: 18px;
+        }
+      }
+    }
+  .menu{
+    ul li{
+      display: inline-block;
+      height: 25px;
+      cursor: pointer;
+      line-height: 10px;
+      color: #A6A6A6;
+      margin-right: 60px;
+      padding: 0 15px;
+    }
+    .activeLi{
+      border-bottom: 3px solid #00BA8F;
+      padding: 0 15px;
+      color: #00BA8F;
+    }
+  }
+}

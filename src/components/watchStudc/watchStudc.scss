@@ -1,0 +1,80 @@
+.watchStudc{
+	.title{
+		width: 880px;
+		height: 80px;
+		line-height: 80px;
+		margin: 0 auto;
+		text-align: center;
+		border-bottom: 1px solid #e6e6e6;
+		color: #333333;
+	}
+	.fl{
+		float: left;
+	}
+	.fr{
+		float: right;
+	}
+	.clearfix{
+		clear: both;
+		float: none;
+		zoom:1;
+	}
+	.watchStuCon{
+		margin-top: 19px;
+		background-color:#fff;
+		.watchStuConT{
+			width: 880px;
+	    height: 50px;
+			line-height: 50px;
+	    margin: 0 auto;
+	    border-bottom: 1px solid #e6e6e6;
+			.stuConT-l{
+				font-size: 14px;
+				color: #666666;
+			}
+			.but-size{
+				width: 150px;
+				height: 30px;
+			}
+		}
+		.stuSubject{
+			width: 960px;
+			padding: 0 40px;
+			.stuSubCon{
+				width: 196px;
+				height: 139px;
+				margin: 30px 30px 20px 0px;
+				border:1px solid #ccc;
+				display: inline-block;
+				background-color:#fff;
+				// padding:10px;
+				text-align: center;
+				box-sizing: border-box;
+				.pause, .play{
+					margin-top: 7px;
+				}
+				.word{
+					color: #333;
+					font-size: 22px;
+					padding-top:40px;
+					height: 92px;
+				}
+				.stuSubConFoot{
+					height: 45px;
+					padding:7px 20px;
+					background-color:#f4f4f4;
+					.stuSubConScore{
+						font-size: 30px;
+						color: #00ba8f;
+						font-family: "宋体"
+					}
+				}
+
+			}
+			.stuSubCon:nth-child(4n) {
+				margin-right: 0px;
+			}
+		}
+	}
+
+}

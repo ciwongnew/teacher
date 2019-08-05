@@ -1,0 +1,14 @@
+.firstBox {
+ 	@include selectBox(100px,30px);
+ }
+ .secondBox {
+ 	@include selectBox(auto,30px);
+
+}
+.selectBtn {
+	  background: url("./../img/btn.png") no-repeat scroll 95% center transparent;
+	  margin-right: 14px;
+	  background-size:10px auto;
+		background-color: #fff;
+		border: 1px solid #C5CCCD;
+	}

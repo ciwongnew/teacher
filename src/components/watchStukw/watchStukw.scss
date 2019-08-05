@@ -1,0 +1,89 @@
+.watchStukw{
+	.title{
+		width: 880px;
+		height: 80px;
+		line-height: 80px;
+		margin: 0 auto;
+		text-align: center;
+		border-bottom: 1px solid #e6e6e6;
+		color: #333333;
+	}
+	.fl{
+		float: left;
+	}
+	.fr{
+		float: right;
+	}
+	.clearfix{
+		clear: both;
+		float: none;
+		zoom:1;
+	}
+	.watchStuCon{
+		margin-top: 19px;
+		background-color:#fff;
+		.watchStuConT{
+			width: 880px;
+	    height: 50px;
+			line-height: 50px;
+	    margin: 0 auto;
+	    border-bottom: 1px solid #e6e6e6;
+			.stuConT-l{
+				font-size: 14px;
+				color: #666666;
+			}
+			.but-size{
+				width: 150px;
+				height: 30px;
+			}
+		}
+		.stuSubject{
+            padding-bottom:20px;
+			.stuSubCon{
+				background-color:#fff;
+
+				margin:20px 38px;
+				border:1px solid #ccc;
+				@include borderRadius(5px);
+				.stuSubM{
+					line-height: 23px;
+					padding:20px;
+				}
+				.stuSubConFoot{
+					height: 49px;
+					// line-height: 49px;
+					margin: 17px 0 0;
+					padding:10px 20px;
+					background-color:#f4f4f4;
+					border-bottom-left-radius:5px;
+					border-bottom-right-radius:5px;
+					.subConFoot-l{
+						font-size: 14px;
+						color: #333;
+						.button{
+							vertical-align: middle;
+							margin-right: 20px;
+						}
+						.readMore{
+							display: inline-block;
+							color: #333;
+							font-size: 16px;
+						}
+					}
+					.subConFoot-r{
+						color: #333;
+						font-size: 16px;
+						margin-top: -10px;
+						.subConSocre{
+							font-size: 32px;
+							font-family: "宋体";
+							color: #00ba8f;
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+}

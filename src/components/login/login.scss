@@ -1,0 +1,121 @@
+@charset "utf-8";
+.loginBox{
+  .login {
+    width: 100%;
+    font-size: 18px;
+    .loginBG {
+      width: 100%;
+      height: calc(100% - 60px);
+      margin: 0 auto;
+      background-size: cover;
+      overflow: hidden;
+      position:absolute;
+      left: 0;
+      .loginContent {
+        width: 438px;
+        margin: 120px auto;
+        background-color: #fff;
+        form {
+          .loginBox {
+            padding: 59px 69px 0;
+            height: 439px;
+            border-bottom: 1px solid #E7E7E7;
+            h4 {
+              text-align: center;
+              font: 24px $font-roboto;
+              margin-bottom: 56px;
+            }
+            input[type="text"] {
+              background: url("./../../assets/img/user.png") no-repeat 10px;
+            }
+            input[type="password"] {
+              background: url("./../../assets/img/pwd.png") no-repeat 10px;
+            }
+            input[type="text"], input[type="password"] {
+              width: 300px;
+              height: 50px;
+              border: 1px solid #ccc;
+              border-radius: $buttonBorderRadius;
+              padding-left: 37px;
+              margin-bottom: 20px;
+              outline-color: $baseColor;
+            }
+          }
+          .loginBtn {
+            margin-top: 20px;
+            width: 300px;
+            height: 44px;
+            padding: 0;
+            font: 18px $font-roboto;
+            color: #fff;
+            background-color: $buttonGreenHover;
+            &:active{
+              color: rgba(255, 255, 255, 0.4);
+              background-color: #039702;
+            }
+          }
+          .loginTools {
+            margin-top: 30px;
+            font: 14px $font-roboto;
+            line-height: 18px;
+            .checkbox {
+              float: left;
+              width: 17px;
+              cursor: pointer;
+              height: 17px;
+              border: 1px solid #ccc;
+              border-radius: $buttonBorderRadius;
+              margin-right: 10px;
+              &.checked {
+                background: url("./../../assets/img/check.png") no-repeat center center;
+              }
+            }
+            .ForgotPwd {
+              float: right;
+
+            }
+          }
+        }
+      }
+      .log_register {
+        height: 70px;
+        p {
+          font: 18px $font-roboto;
+          color: #00B98F;
+          line-height: 70px;
+          text-align: center;
+          cursor: pointer;
+        }
+        .registerBtn {
+          width: 300px;
+          height: 44px;
+          padding: 0;
+          background-color: #fff;
+          border: 1px solid #00B98F;
+          font: 18px $font-roboto;
+          color: #00B98F;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .download{
+    width: 140px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 20px;
+  }
+  .botton{
+    width:100%;
+    height: 50px;
+    font: 18px "Microsoft Yahei";
+    // background-color: #fff;
+    text-align: center;
+    font: 14px "Microsoft Yahei";
+    line-height: 50px;
+    color: #999;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+}

@@ -1,0 +1,8 @@
+.field{
+	width: 100%;
+	@include setHeight(px2rem($fieldHeight));
+	padding: 0 px2rem($fieldPadding);
+	background: rgba(0,0,0,0);
+	font-size: px2rem($fieldFontSize);
+	color: $fieldColor;
+}

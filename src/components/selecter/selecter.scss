@@ -1,0 +1,44 @@
+.selecter{
+  position: relative;
+  font: 14px $font-roboto;
+  background-color: #fff;
+  width: 100%;
+  span {
+    cursor: pointer;
+    display: block;
+    padding: 0px 18px;
+    line-height: 32px;
+    height: 32px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    //border-radius: $buttonBorderRadius;
+    text-align: center;
+    background: url("../../assets/img/arrow-down.png") no-repeat  90% center transparent;
+  }
+  .panel {
+    position: absolute;
+    z-index: 66;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 14px;
+    display: none;
+    overflow: hidden;
+    cursor: pointer;
+    li {
+      padding: 3px 16px;
+      overflow: hidden;
+      display: block;
+      text-align: left;
+      &.isShow {
+        display: none;
+      }
+      &:hover {
+        background-color: #2BB990;
+        color: #fff;
+      }
+    }
+  }
+  .showPanel {
+    display: block;
+  }
+}

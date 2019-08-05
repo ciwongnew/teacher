@@ -1,0 +1,336 @@
+.publish{
+      .layer{
+        padding: 0 40px;
+        .work_title{
+          width: 100%;
+          padding: 25px 0px;
+          margin-bottom: 50px;
+          border-bottom: 1px solid #e6e6e6;
+          text-align: center;
+        }
+        .Steps{
+          width: 756px;
+          margin-left: 108px;
+          margin-bottom: 30px;
+          span{
+            float: left;
+            text-align: center;
+            color: #999;
+            padding-bottom: 20px;
+            &.step1{
+              width: 30%;
+              color: #00ba8f;
+            }
+            &.step2{
+              width: 40%;
+              color: #00ba8f;
+            }
+            &.step3{
+              width: 30%;
+              color: #00ba8f;
+            }
+          }
+        }
+        .font_14{
+          font-size: 14px;
+        }
+        .header{
+          width: 100%;
+          height: 60px;
+          background-color: #2C3842;
+          position: relative;
+          .close{
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: 20px;
+            bottom: 20px;
+            background: url("../../assets/img/close.png") no-repeat scroll right center transparent;
+          }
+        }
+        .main{
+          width: 100%;
+          background-color: #fff;
+          .firstBox{
+            margin-top: 40px;
+            .grids{
+              span{
+                color: #999999;
+                line-height: 90px;
+                font-size: 14px;
+                float: left;
+              }
+              .workMessage{
+                display: inline-block;
+                position: relative;
+                margin-left: 35px;
+                .textarea{
+                  font-size: 14px;
+                  width: 780px;
+                  height: 90px;
+                  border: 1px solid #e6e6e6;
+                  background-color: #fff;
+                  border-radius: 5px;
+                  padding-left: 20px;
+                  padding-top: 20px;
+                }
+                .smallpro{
+                  position: absolute;
+                  bottom: 12px;
+                  right: 10px;
+                  font-size: 12px;
+                  color: #999999;
+                }
+              }
+            }
+          }
+          //布置对象选择
+          .secondBox{
+            margin-top: 40px;
+            .grids{
+              span{
+                color: #666;
+                display: inline-block;
+                height: 50px;
+                line-height: 50px;
+                vertical-align: middle;
+                font-size: 14px;
+                & + i{
+                  color: #999;
+                  font-size: 14px;
+                  & + i{
+                    color: #999;
+                    font-size: 14px;
+                  }
+                }
+              }
+              .choose{
+                float: left;
+                font-size: 14px;
+              }
+              .student_details,.work_details{
+                width: 780px;
+                max-height: 200px;
+                margin-left: 104px;
+                border: 1px solid #e6e6e6;
+              }
+              .student_details{
+                overflow-y: scroll;
+                border: 0px;
+                ul li img{
+                  vertical-align: sub;
+                }
+                .nameLimit{
+                  display: inline-block;
+                  max-width: 720px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+                img{
+                  vertical-align: middle;
+                }
+              }
+              .work_details{
+                ul{
+                  max-height: 150px;
+                  overflow-y: scroll;
+                  li{
+                    padding-left: 20px;
+                    img{
+                      vertical-align: middle;
+                    }
+                    span{
+                      color: #666;
+                      font-size: 14px;
+                      vertical-align: baseline;
+                    }
+                    .preview{
+                      color: #00ba8f;
+                      cursor: pointer;
+                      float: right;
+                      padding-right: 20px;
+                    }
+                  }
+                }
+              }
+              .selectTime{
+                width: 780px;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 5px;
+                margin-left: 104px;
+            			.radio{
+                    display: inline-block;
+                    width: 136px;
+                    height: 40px;
+                    line-height: 40px;
+                    border: 1px solid #e6e6e6;
+                    text-align: center;
+                    cursor: pointer;
+                    margin-right: 10px;
+                    font-size: 14px;
+                    &.active {
+                      border-color: #00ba8f;
+                      background: url("../../assets/img/check_state.png") no-repeat;
+                      background-position: bottom right;
+                    }
+            				.checkSex{
+            					background: url('./../../assets/img/sex.png');
+            				}
+
+            			}
+
+              }
+              .timing{
+                display: inline-block;
+                width: 156px;
+                height: 40px;
+                border: 1px solid #e6e6e6;
+                background: url("../../assets/img/calendar.png") no-repeat;
+                background-position: 90%;
+                padding: 0 10px;
+                margin-right: 10px;
+                color: #666;
+              }
+              .times {
+                display: inline-block;
+
+                p{
+                  display: inline-block;
+                  margin-left: 10px;
+                  color: #666666;
+                  font-size: 14px;
+                }
+              }
+              .sel_hours{
+                margin-right: 10px;
+              }
+            }
+            .class_list{
+              width: 855px;
+              float: right;
+              li:nth-child(even){
+                margin-left: 20px;
+              }
+              li{
+                float: left;
+                height: 50px;
+                background: #fff;
+                border: 1px solid #dadada;
+                margin-bottom: 20px;
+                cursor: pointer;
+                -ms-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+                margin-right: 10px;
+                @include borderRadius(5px);
+                p{
+                  height: 50px;
+                  width: 400px;
+                  line-height: 50px;
+                  padding-left: 20px;
+                  input{
+                  }
+                  .checkbox + label{
+                    width: 210px;
+                    height: 20px;
+                    line-height: 20px;
+                    font: 14px $font-roboto;
+                    margin-top: 14px;
+                    display: inline-block;
+                    padding-left: 10px;
+
+                  }
+                }
+              }
+            }
+            .time{
+              .flatpickr{
+                width: 780px;
+                height: 50px;
+                border-radius: 5px;
+                padding-left: 43px;
+                background: url("../../assets/img/arrow_down.png") no-repeat scroll 98% center transparent;
+              }
+
+            }
+          }
+          .footerBox{
+            margin-left: 110px;
+            padding-bottom: 80px;
+            div{
+              margin-top: 30px;
+              text-align: center;
+            }
+            .button{
+              width:150px;
+              height: 50px;
+              line-height: 50px;
+              font-size: 14px;
+              display: inline-block;
+              border-radius: 23px;
+            }
+            .write{
+              border: 1px solid #CCCCCC;
+              color: #333333;
+              margin-right: 20px;
+
+            }
+            .write:hover{
+              border-color: #2bb990;
+            }
+            .green{
+
+            }
+          }
+          .noChoose_date{
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              background: url("../../assets/img/checkkuang.png");
+              background-size: 100%;
+              vertical-align:text-top;
+          }
+          .choose_date{
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              background: url("../../assets/img/check.png");
+              background-size: 100%;
+              vertical-align:text-top;
+          }
+          .checkbox{
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              vertical-align:text-top;
+              &:checked{
+                background: url("../../assets/img/check.png");
+                background-size: 100%;
+                border-color: $checkboxCheckedColor;
+              }
+          }
+          .dateChoose{
+            width: 400px;
+            height: 45px;
+            display: block;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            margin-top: 15px;
+            padding-left: 10px;
+            background: url("../../assets/img/arrow_down.png") no-repeat scroll 90% center transparent;
+          }
+        }
+
+      }
+    .clear:after{
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+  }
+
+    }

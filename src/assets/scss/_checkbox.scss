@@ -1,0 +1,23 @@
+.checkbox{
+    width: px2rem($checkboxWidth);
+    height: px2rem($checkboxWidth);
+    display: block;
+    border: 1px solid $lineColor;
+    @include borderRadius(3px);
+    &:checked{
+        background: url(./../img/check.png);
+        background-size: 100%;
+        border-color: $checkboxCheckedColor;
+    }
+	& + label{
+        width: 100%;
+        padding-left: px2rem($checkboxWidth + 10px);
+        position: absolute;
+        margin-top: px2rem($checkboxWidth * -1);
+		@include setHeight(px2rem($checkboxWidth));
+        display: block;
+        vertical-align: top;
+        font-size: px2rem($checkboxFontSize);
+        overflow: hidden;
+	}
+}

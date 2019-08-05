@@ -1,0 +1,165 @@
+*{
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    -webkit-overflow-scrolling: touch; // 滚动更流畅
+    -webkit-touch-callout:none; //系统默认菜单被禁用
+    -webkit-tap-highlight-color: transparent;   //去掉点击闪动
+    -ms-touch-action: manipulation; //ie10去掉点击触发延迟
+    touch-action: manipulation; //ie11去掉点击触发延迟
+    word-wrap: break-word;  //使英文和数字自动换行
+    margin: 0; // 1
+    padding: 0;
+    list-style: none;
+    font-style: normal;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+/*  Structure
+   ========================================================================== */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  *:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $fontColor;
+  font-family: $font-roboto;
+  background: #fff;
+  font-size: 16px;
+}
+
+
+/*  Fluid Media
+   ========================================================================== */
+
+audio,
+img,
+svg,
+object,
+embed,
+canvas,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  font-style: italic;
+  vertical-align: top;
+}
+
+a{
+  text-decoration: none;
+  color: $fontColor;
+}
+//只有头部最大盒子上边距60
+.mt-60{
+  width: 960px;
+  margin: 0 auto 0;
+}
+//头部和面包屑120px
+.mt-120{
+  width: 960px;
+  margin: 10px auto 0;
+}
+//阴影效果
+.box-shadow1{
+  box-shadow:0px 0px 5px 2px rgba(0,0,0,.1);
+}
+.box-shadow2{
+  box-shadow:0px 0px 5px 5px rgba(0,0,0,.1);
+}
+.box-shadow3{
+  box-shadow:0px 3px 5px 1px rgba(0,0,0,.1);
+}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix{float: none;clear: both;}
+.clearfix:after,
+.fl:after ,
+.fr:after {
+    clear:both;
+    content:'\0020';
+    display:block;
+    height:0;
+}
+//toast样式
+.vue-toast{
+  height: 48px;
+  padding: 0 50px;
+  font: 18px $font-roboto;
+  line-height: 48px;
+  margin: auto 0;
+  position: absolute;
+  left:50%;
+  top:50%;
+  z-index: 102;
+  transform:translateX(-50%);
+  opacity: 0.8;
+  background-color: #7f7f7f;
+  color: #fff;
+  img{
+    vertical-align: middle;
+    padding: 0 20px;
+  }
+  p{
+    display: inline-block;
+    padding-right: 20px;
+  }
+}
+@keyframes toast
+{
+  0%   {top:-160px;opacity: 0}
+  25%  {top:60px;opacity: 0.8}
+  75%  {top:60px;opacity: 0.8}
+  100% {top:-160px;opacity: 0}
+}
+@keyframes toastDelete
+{
+  0%   {top:260px;opacity: 0}
+  40%  {top:320px;opacity: 0.8}
+  80%  {top:320px;opacity: 0.8}
+  100% {top:260px;opacity: 0}
+}
+.toast-error{
+  background-color: #7f7f7f;
+  background-position: 12%;
+}
+.toast-delete{
+  position: fixed;
+  top:320px;
+  left:50%;
+  transform:translateX(-50%);
+  // animation:toastDelete 3.1s;
+  // -webkit-animation:toastDelete 3.1s;
+  background-color: #7f7f7f;
+}
+.el-popover{
+  text-align: center;
+  width: 160px;
+  box-shadow:0px 0px 5px 2px rgba(0,0,0,.1);
+  .showService{
+    background-color: #fff;
+    min-height: 80px;
+    p{
+      text-align: center;
+      line-height: 24px;
+      font-size: 14px;
+    }
+  }
+}

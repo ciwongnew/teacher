@@ -1,0 +1,29 @@
+@charset "utf-8";
+.paging{
+  font-size: 12px;
+  float: right;
+  margin: 30px 30px 0 0;
+  line-height: 26px;
+  span{
+    float: left;
+  }
+  div{
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    font: 14px "simsun";
+    line-height: 26px;
+    border-radius: $buttonBorderRadius;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #fff;
+    float: left;
+    margin: 0 8px;
+    img{
+      vertical-align: baseline;
+    }
+    &:hover{
+      background-color: #ddd;
+    }
+  }
+}

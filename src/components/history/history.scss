@@ -1,0 +1,342 @@
+.historyWork{
+    .timeBox{
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      margin: 0 auto;
+      margin: auto;
+      border-radius: 4px;
+      padding: 4px 0px;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+      background-color: #f2f2f2;
+      p{
+        width: 90px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-top: 20px;
+        background-color: #dadada;
+      }
+    }
+    //box-shadow: 0px 4px 10px #888888;
+  .historyHead{
+    width: 100%;
+    height: 48px;
+    background-color: #eefafa;
+    border-radius: $buttonBorderRadius $buttonBorderRadius 0 0;
+
+    .titleAndState {
+      display: inline-flex;
+      float: right;
+      height: 48px;
+      line-height: 48px;
+      .title{
+        font-size: 18px;
+        font-weight: 700;
+        font-family: "PingFang SC";
+        color: #333;
+        float: left;
+        max-width: 88%;
+        margin-bottom: 10px;
+      }
+      .state{
+        display: inline-block;
+        width: 60px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 12px;
+        color: #fff;
+        margin: 0 20px;
+        font-weight: bold;
+        //作业未完成图标状态
+        .point{
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          display: inline-block;
+          &.unpublished{
+              background-color: #f6ad1b;
+          }
+          //作业进行中图标状态
+          &.underway{
+            background-color: #00ba8f;
+          }
+          &.end{
+            background-color: #ddd;
+          }
+        }
+        &.unpublished{
+            color: #f6ad1b;
+        }
+        //作业进行中图标状态
+        &.underway{
+          color: #00ba8f;
+        }
+        &.end{
+          color: #ddd;
+        }
+      }
+      .publishTime{
+        font-size: 12px;
+        color: #999;
+        //作业未完成文字状态，其他状态为默认
+        // &.unpublished{
+        //   color: #f6ad1b;
+        // }
+        // &.underway{
+        //   color: #00ba8f;
+        // }
+      }
+    }
+    .headContent{
+      height: 48px;
+      line-height: 48px;
+      display: inline-flex;
+      span:first-child {
+        max-width: 300px;
+        font-size: 18px;
+        color: #333333;
+        margin-left: 30px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+      }
+      span{
+        // float: left;
+        // height: 22px;
+        // color: #999;
+        // font-size: 14px;
+        // margin-right: 34px;
+        // padding-left: 34px;
+        &.timeBox{
+          background: url("./../../assets/img/clock.png") no-repeat left center;
+        }
+        &.workName{
+          background: url("./../../assets/img/workName.png") no-repeat left center;
+          margin-left: 30px;
+          padding-left: 30px;
+          color: #9f9f9f;
+          font-size: 12px;
+        }
+      }
+
+    }
+  }
+  .historyContent{
+    border-bottom: 3px solid #eaeaea;
+    // width: 94%;
+    padding: 0 50px;
+    margin: auto;
+    padding-bottom: 30px;
+    position: relative;
+    .receiveObj {
+      position: relative;
+      width: 675px;
+      border-bottom: 2px solid #eaeaea;
+      padding-top: 56px;
+      padding-bottom: 32px;
+      margin-bottom: 20px;
+      div:first-child{
+        display: inline-block;
+        span{
+          font-size: 12px;
+          color: #999999
+        }
+        p{
+          font-size: 16px;
+          margin-top: 10px;
+          width: 300px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .recall_btn, .rush_btn {
+        float: right;
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        color: #00ba8f;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+
+      }
+      .rush_btn {
+        margin-right: 40px;
+      }
+      .rush_btn:hover, .recall_btn:hover {
+        border: 1px solid #00ba8f;
+        border-radius: 15px;
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+    .bar {
+      position: absolute;
+      top: 20px;
+      right: 38px;
+    }
+    .contentHead{
+      border-bottom: 1px solid #e7e7e7;
+      border-radius: $buttonBorderRadius $buttonBorderRadius 0 0;
+      padding: 30px 20px 30px 5px;
+      .worksTools{
+        //height: 32px;
+        .receiveObj{
+          float: left;
+          line-height: 32px;
+          height: 32px;
+          padding-left: 34px;
+          background: url("./../../assets/img/person.png") no-repeat left center;
+          max-width: 40%;
+          font-size: 14px;
+          color: #333;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .summary{
+          float: right;
+          padding: 0;
+          width: 100px;
+          margin-right: 20px;
+          position: relative;
+          .green{
+            background: #fff;
+            border-color: #01a881;
+            color: #01a881;
+          }
+          .recall_btn{
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+          }
+          .recall_btn:hover{
+            width: 18px;
+            height: 18px;
+            background-color: #e7e7e7;
+          }
+          span{
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            line-height: 46px;
+            /* margin: auto; */
+            text-align: center;
+            font-size: 14px;
+            color: #fb4919;
+            cursor: pointer;
+            position: absolute;
+            top: 27px;
+            /* bottom: 0px; */
+            left: -75px;
+            background: url("./../../assets/img/recall_btn.png") no-repeat left center;
+          }
+          .click_recall{
+            color: #fff;
+            // background: url("./../../assets/img/recall_btn2.png") no-repeat left center;
+          }
+        }
+        .recall{
+          float: right;
+          width: 100px;
+          .selecter{
+
+            ul{
+              width: 100px;
+            }
+            ul>li{
+              height: 32px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+    .workContent{
+      padding-left: 10px;
+      width: 675px;
+      cursor: pointer;
+      .worksBox{
+        height: 74px;
+        border-bottom: 1px solid #e7e7e7;
+        cursor: pointer
+        ;
+        .workName{
+          height: 74px;
+          line-height: 74px;
+          float: left;
+          font-size: 14px;
+          color: #666;
+          font-size: 14px;
+        }
+        .workStatu{
+          height: 74px;
+          color: #a0a0a0;
+          line-height: 74px;
+          float: right;
+          padding-right: 28px;
+          span{
+            margin-left: 32px;
+          }
+        }
+      }
+      span:first-child{
+        color: #00ba8f;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+          text-decoration-color: #00ba8f;
+        }
+      }
+      span:nth-child(2) {
+        float: right;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        padding-right: 10px;
+        i:first-child{
+          color: #adadad;
+          font-size: 14px;
+          padding-right: 10px;
+        }
+      }
+    }
+    .workContent:hover{
+      background-color: #eefafa;
+    }
+    .summary {
+      width: 108px;
+      height: 34px;
+      border: 1px solid #00ba8f;
+      border-radius: 30px;
+      text-align: center;
+      line-height: 32px;
+      color: #00ba8f;
+      position: absolute;
+      top: 175px;
+      right: 70px;
+      cursor: pointer;
+    }
+    &:last-child {
+      border-bottom: 0px;
+    }
+  }
+  .clear:after{
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+  }
+}

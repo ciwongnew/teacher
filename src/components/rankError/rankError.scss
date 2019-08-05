@@ -1,0 +1,91 @@
+.rankError{
+  	background-color:#fff;
+  	padding:25px;
+    position:relative;
+  	.orange{
+  		color: #fb4919;
+  	}
+  	.green{
+  		color: #00ba8f;
+  	}
+    .bgGreen{
+      background-color:#00ba8f;
+    }
+    .bgOrange{
+      background-color:#fb4919;
+    }
+  	.md-20{
+  		margin-bottom: 20px;
+  	}
+    .loading{
+     position:absolute;
+     top: 50%;
+     left:50%;
+     margin-top:22px;
+     margin-left: -134px;
+    }
+  	.rankErrorBox{
+      .rankErrorTitP{
+        width: 540px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; 
+        cursor: pointer;
+          &:hover{
+            color: #2bb990;
+          }
+      }
+  	  .rankErrorTit{
+  	  	width: 540px;
+  	  	overflow: hidden;
+  	  	white-space: nowrap;
+  	  	text-overflow: ellipsis; 
+  	  	cursor: pointer;
+  	     }
+          .rankErrorTwo{
+          	margin-top: 20px;
+          	padding:20px 20px 5px;
+          	border: 1px solid #ccc;
+          	@include borderRadius(5px);
+          	.errorNum{
+                 margin-right: 10px;
+                 font-size: 12px;
+                 color: #666;
+          	}
+            .errorNumNone{
+              width: 150px;
+              text-align: center;
+            }
+          	.progress{
+          	  display: inline-block;
+          	  width: 150px;
+          	  height: 10px; 
+          	  border:1px solid #ccc; 
+          	  @include borderRadius(5px);
+          	  overflow: hidden; 
+          	  background-color:#e5e5e5; 
+          	  box-shadow: 0 0 5px 0px #ddd inset; 
+          	  position: relative; 	  
+          	  .progressChild { 
+          	  	display: inline-block; 
+          	  	// width: 70%; 
+          	  	height: 100%; 
+          	  	// background:#fb4919; 
+          	  	position: absolute;
+          	  	top: 0;
+          	  	left: 0;
+          	  	// animation:load 3s ease-in; 
+          	  	} 
+          	  }      	  
+        	  	// @keyframes load{
+        	  	// 	0%{ 
+        	  	// 		width: 0%;
+        	  	// 	} 
+        	  	// 	100%{
+        	  	// 		width:70%;
+        	  	// 	} 
+        	  	// }
+           }
+  	 }
+    
+}

@@ -1,0 +1,22 @@
+@mixin setHeight($h, $lh: $h){
+	height: $h;
+	@if ($lh) {
+		line-height: $lh
+	} else {
+		line-height: $h;
+	}
+}
+
+@mixin borderRadius($n: 5px) {
+	-ms-border-radius: $n;
+	-moz-border-radius: $n;
+	-webkit-border-radius: $n;
+	border-radius: $n;
+}
+
+@mixin rotate($n){
+	-ms-transform: rotate($n+deg);
+	-moz-transform: rotate($n+deg);
+	-webkit-transform: rotate($n+deg);
+	transform: rotate($n+deg);
+}

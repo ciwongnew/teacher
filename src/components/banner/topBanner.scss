@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+.topBanner {
+  width: 100%;
+  height: 80px;
+  padding-top: 10px;
+  background-color: #fff;
+  color: #999999;
+  font: 14px "Microsoft Yahei";
+  z-index: 99;
+  position: relative;
+  border-bottom: 1px solid #00ba8f;
+  //margin-top: 10px;
+  .topContent {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #00BA8F;
+    .topIcon {
+      height: 70px;
+      float: left;
+      font: 18px $font-roboto;
+      color: #fff;
+      line-height: 70px;
+      position: relative;
+     span {
+        margin-right: 5px;
+        &.loginBox {
+          font: 18px $font-roboto;
+          width: 30px;
+          border-left: 1px solid #fff;
+          padding-left: 10px;
+          color: #fff;
+        }
+      }
+      img{
+        margin-top: 15px;
+        margin-right: 40px;
+      }
+    }
+    .serviceTel{
+      font-size: 18px;
+      color: #fff;
+      float: right;
+      line-height: 70px;
+    }
+    .ulBanner {
+      height: 70px;
+      font: 18px $font-roboto;
+      float: left;
+      li {
+        float: left;
+        position: relative;
+        line-height: 70px;
+        text-align: center;
+        .mySve{
+          width: 102px;
+          height: 70px;
+          color: #91a5aa;
+          position: relative;
+          .myMenu{
+            display: none;
+            width: 180px;
+            background-color: #fff;
+            position: absolute;
+            top: 64px;
+            left: -38px;
+            ul{
+              li{
+                cursor: pointer;
+                height: 70px;
+                line-height:70px;
+                float: none;
+                a{
+                border: none !important;
+                color: #A4EFDE;
+                }
+                &:hover{
+                  // background-color: #e5e5e5;
+                }
+              }
+            }
+          }
+        }
+        a{
+          display: inline-block;
+          width: 102px;
+          height: 70px;
+          color: #999999;
+          font-size: 20px;
+          &.active{
+            border-bottom: 5px solid #00ba8f;
+            color: #00ba8f;
+            cursor: pointer;
+          }
+          &:hover{
+            // border-bottom: 4px solid rgba(255,255,255,.3);
+            // color: #fff;
+            // cursor: pointer;
+          }
+        }
+        .msgPro{
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #ff762b;
+          display: inline-block;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        }
+      }
+    }
+    .consultant {
+      width: 140px;
+      height: 70px;
+      float: right;
+      margin-right: 15px;
+      padding-top: 20px;
+      background: url("./../../assets/img/consult.png") no-repeat left 21px;
+      cursor: pointer;
+      position: relative;
+      &:hover .consultantBox {
+        display: block;
+        z-index: 999;
+      }
+      .consultantText {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-right: 1px solid #fff;
+        color: #999999;
+        background: url("./../../assets/img/arrow-down.png") no-repeat 120px center;
+      }
+      .consultantBox {
+        display: none;
+        width: 430px;
+        height: 190px;
+        position: absolute;
+        top: 64px;
+        left: -146px;
+        z-index: 101;
+        border-radius: $buttonBorderRadius;
+        background-color: #fff;
+        padding: 30px 30px 15px 30px;
+        .consultantLeft{
+          float: left;
+          &>span {
+            font: 18px $font-roboto;
+            color: #000;
+          }
+          .consultantP{
+            margin-top: 8px;
+            td{
+              text-align: right;
+              vertical-align: top;
+              height: 24px;
+              &:nth-of-type(2){
+                width: 150px;
+                text-align: left;
+              }
+              i{
+                width: 46px;
+                color: #a0a0a0;
+                text-align: Right;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+        .consultantRight{
+          width: 130px;
+          height: 160px;
+          float: right;
+          img{
+            width: 130px;
+            height: 130px;
+          }
+          p{
+            text-align: center;
+            color: #a0a0a0;
+          }
+        }
+      }
+    }
+    .topRight {
+      height: 70px;
+      float: right;
+      .teacher {
+        line-height: 70px;
+        position: relative;
+        .teacherBox {
+          float: left;
+          height: 65px;
+          cursor: pointer;
+          &:hover .teacherInformation {
+            display: block;
+            z-index: 999;
+          }
+          .teacherIcon {
+            float: left;
+            margin: 20px 10px 0 20px;
+            width: 20px;
+            height: 20px;
+          }
+          >span {
+            padding-right: 20px;
+            position: relative;
+            margin-right: 10px;
+            color: #999999;
+            display: inline-block;
+            width: 86px;
+            height: 70px;
+            line-height: 57px;
+            overflow: hidden;
+            i {
+              width: 15px;
+              height: 44px;
+              background: url("./../../assets/img/arrow-down.png") center no-repeat;
+              position: absolute;
+              top: 10px;
+              right: 2px;
+              z-index: 5
+            }
+          }
+          .teacherInformation {
+            display: none;
+            padding: 16px 16px 0;
+            z-index: 101;
+            border-radius: $buttonBorderRadius;
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            position: absolute;
+            top: 64px;
+            right: 30px;
+            .informationTop {
+              width: 100%;
+              height: 50px;
+              .teacherIcon {
+                width: 50px;
+                height: 50px;
+                margin: 0 20px 0 0;
+              }
+              .teacherAccount {
+                float: left;
+                height: 24px;
+                line-height: 24px;
+                h4 {
+                  font: 18px $font-roboto;
+                  margin-top: 2px;
+                }
+                span {
+                  display: inline;
+                  padding: 0;
+                  border: none;
+                  color: #999;
+                }
+              }
+            }
+            .informationBottom {
+              width: 100%;
+              height: 194px;
+              li {
+                height: 58px;
+                padding-left: 36px;
+                font: 14px $font-roboto;
+                &:nth-of-type(1) {
+                  background: url("./../../assets/img/personal.png") no-repeat 4px 18px;
+                }
+                &:nth-of-type(2) {
+                  background: url("./../../assets/img/exit.png") no-repeat 4px 20px;
+                }
+                a, .logout {
+                  float: left;
+                  margin-top: 12px;
+                  width: 100%;
+                  height: 34px;
+                  line-height: 34px;
+                  b {
+                    float: right;
+                    font: 14px "simsun";
+                    line-height: 34px;
+                    margin-right: 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .message {
+          // width: 32px;
+          // height: 44px;
+          // margin: 6px 20px 0 0;
+          // float: right;
+          // background: url("./../../assets/img/message.png") center no-repeat;
+          // &.unread{
+          //   background: url("./../../assets/img/newMessage.png") no-repeat center;
+          // }
+        }
+      }
+    }
+    .forgetPwd, .registerState{
+      height: 60px;
+      float: right;
+      span{
+        color: #fff;
+        font: 18px $font-roboto;
+        line-height: 60px;
+        margin-right: 10px;
+      }
+      a{
+        font: 18px $font-roboto;
+        line-height: 58px;
+        color: #fff;
+        padding-right: 8px;
+        margin-right: 8px;
+        border-right: 1px solid #fff;
+      }
+    }
+    .registerState span, .registerState a{
+      font-size: 14px;
+    }
+    .registerState a{
+      border: 1px solid #fff;
+      padding: 6px;
+      &:hover{
+        background-color: #fff;
+        color: #00BA8F;
+      }
+      &:active{
+        background: #ebebeb;
+        color: #00ba8f;
+        border: none;
+      }
+    }
+  }
+}

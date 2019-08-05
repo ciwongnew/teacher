@@ -1,0 +1,41 @@
+.rankWorkTable{
+	 overflow:auto;
+	// cursor:move;
+	.socreTable{
+		width: 100%;
+		border:0;
+		tr{
+			height: 59px;
+			line-height: 59px;
+			display: flex;
+			//justify-content: space-around;
+			&:nth-child(odd){
+				background-color:#ffffff;
+			}
+			&:nth-child(even){
+				background-color:#F8F8F8;
+			}
+			td{
+				flex: 1;
+				//width: 160px;
+				padding: 0 10px;
+				text-align: center;	
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;		
+			}
+			.btn-size{
+				width: 90px;
+				height: 32px;
+				padding:0px;
+				font-size: 14px;
+			}
+			.unSublime{
+				color: #FB5528;
+			}
+			.grayzi{
+				color: #999;
+			}
+		}
+	}
+}

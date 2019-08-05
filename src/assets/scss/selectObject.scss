@@ -1,0 +1,197 @@
+.selectObject{
+  background: #fff;
+  height: 600px;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  .selectHead{
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-weight: bold;
+  }
+  .selectContent{
+    width: 100%;
+    height: 380px;
+    margin-top: 30px;
+    .leftBox{
+      width: 280px;
+      height: 380px;
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-right: none;
+      overflow: auto;
+      .classbox{
+        width: 100%;
+        height: 56px;
+        cursor: pointer;
+        &.selected{
+          border-top: 1px solid #e6e6e6;
+          border-bottom: 1px solid #e6e6e6;
+          background: #f4f4f4;
+          &.frist{
+            border: none;
+            border-bottom: 1px solid #e6e6e6;
+          }
+        }
+        .checkCount{
+          font-size: 14px;
+          margin: 18px 20px 0 0;
+          color: #999;
+        }
+        .el-checkbox{
+          margin: 17px 0 0 20px;
+          .el-checkbox__input{
+            vertical-align: top;
+            &.is-checked,&.is-indeterminate{
+              .el-checkbox__inner{
+                background-color: #00BA8F;
+                border-color: #00BA8F;
+
+              }
+              vertical-align: text-bottom;
+            }
+            &.is-indeterminate{
+              .el-checkbox__inner{
+                &::before{
+                  content: '';
+                  position: absolute;
+                  display: block;
+                  left: 4px;
+                  width: 8px;
+                  top: 5px;
+                  height: 8px;
+                  background: #fff;
+                }
+              }
+            }
+            .el-checkbox__inner{
+              border-radius: 0;
+              width: 20px;
+              height: 20px;
+              border: 1px solid #bfcbd9;
+              transition: none;
+              &::after{
+                height: 10px;
+                top: 2px;
+                left: 6px;
+                transition: none;
+              }
+            }
+          }
+          .el-checkbox__label{
+            padding-left: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            width: 125px;
+          }
+        }
+      }
+    }
+    .rightBox{
+      width: 600px;
+      height: 380px;
+      background: #f4f4f4;
+      border: 1px solid #e6e6e6;
+      border-left: none;
+      padding: 18px 0 0 20px;
+      overflow-y: auto;
+      .checkBox{
+        .input{
+          width: 140px;
+          height: 50px;
+          .label{
+            color: #666;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            white-space: nowrap;
+            .studentName{
+              padding-left: 8px;
+              font-size: 14px;
+              color: #666;
+              overflow-x: hidden;
+              text-overflow: ellipsis;
+              max-width: 104px;
+              float: left;
+            }
+            .inputBox{
+              white-space: nowrap;
+              cursor: pointer;
+              outline: none;
+              display: inline-block;
+              line-height: 1;
+              position: relative;
+              vertical-align: middle;
+              &.isChecked{
+                .checkBox{
+                  background-color: #00BA8F;
+                  border-color: #00BA8F;
+                  &::after{
+                    transform: rotate(45deg) scaleY(1);
+                  }
+                }
+              }
+              .checkBox{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #bfcbd9;
+                position: relative;
+                box-sizing: border-box;
+                background-color: #fff;
+                z-index: 1;
+                &::after{
+                  box-sizing: content-box;
+                  content: "";
+                  border: 2px solid #fff;
+                  border-left: 0;
+                  border-top: 0;
+                  height: 10px;
+                  top: 2px;
+                  left: 6px;
+                  position: absolute;
+                  transform: rotate(45deg) scaleY(0);
+                  width: 4px;
+                  transform-origin: center;
+                }
+              }
+              input{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .nextOne{
+    width: 100%;
+    height: 112px;
+    .button{
+      width: 150px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: #00BA8F;
+      border: none;
+      border-radius: 23px;
+      margin: 31px 365px;
+      &:hover{
+        background-color: #01a881;
+      }
+      &.disabled{
+        background-color: #d9d9d9;
+        border: #d9d9d9;
+        color: #fff;
+        &:hover,&:active{
+          border-color: #d9d9d9;
+          background: #d9d9d9;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.layerSch{
+	display: none;
+	transition: all 2s;
+	.content{
+		width: 580px;
+		position: fixed;
+		top: 80px;
+		left: 36%;
+		font: 14px $fontColor;
+		border-radius: 4px;
+		z-index: 4;
+		.top{
+			width: 100%;
+			height: 60px;
+			background-color: #2C3842;
+			position: relative;
+			h4{
+				font-size: 18px;
+				color: #FFF;
+				text-align: center;
+				padding-top: 20px;
+			}
+			.close{
+				position: absolute;
+	            width: 16px;
+	            height: 16px;
+	            right: 20px;
+	            bottom: 20px;
+	            background: url("../../assets/img/close.png") no-repeat scroll right center transparent;
+			}
+		}
+		.main{
+			width: 100%;
+			background-color: #fff;
+			.selectArea{
+				margin-left: 20px;
+				padding-top: 30px;
+			}
+			p{
+				margin-left: -20px;
+				.field{
+					width: 520px;
+					height: 50px;
+					font-size: 14px;
+					line-height: 50px;
+					border: 1px solid #CCCCCC;
+	            	background-color: #fff;
+	            	border-radius: 4px;
+	            	background: #fff url('../../assets/img/search.png') right 50% no-repeat;
+
+				}
+			}
+			.prompt{
+				p{
+					color: #999999;
+					text-align: left;
+					margin-left: 20px;
+					margin-top: 30px;
+				}
+				.clear:after{
+					content: ".";
+					visibility: hidden;
+					height: 0;
+					display: block;
+					clear: both;
+				}
+				ul{
+					margin-top: 20px;
+					margin-left: 20px;
+					li{
+						float: left;
+						width: 120px;
+						height: 30px;
+						margin-right: 60px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						text-align: left;
+					}
+				}
+
+			}
+		}
+		p:last-child{
+			color: #999999;
+			padding: 30px 0px;
+		}
+	}
+	.noticeMask{
+	    //遮罩层
+	    width: 100%;
+	    height: 100%;
+	    transform: translateX(0);
+	    background-color: rgba(0, 0, 0, 0.4);
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    margin: 0 auto;
+	   	z-index: 3;
+	}
+}

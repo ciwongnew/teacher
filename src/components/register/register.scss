@@ -1,0 +1,93 @@
+.register{
+  margin: 0 auto;
+  margin-top: 100px;
+  font: 14px $font-roboto;
+  .title{
+    text-align: center;
+    font-size: 24px;
+  }
+  form{
+    width: 630px;
+    margin: auto;
+    margin-top: 82px;
+    .headMsg{
+      text-align: center;
+      margin-bottom: 50px;
+      p{
+        display: inline-block;
+        vertical-align: text-top;
+        padding-left: 16px;
+        font-size: 24px;
+        margin-bottom: 0px;
+      }
+    }
+    .error_msg{
+      margin-top: -30px;
+      display: block;
+      padding: 10px;
+      margin-left: 110px;
+      img{
+        vertical-align: middle;
+      }
+      span{
+        color: #f75f0c;
+      }
+    }
+    p{
+      margin-bottom: 30px;
+
+      label{
+        width: 120px;
+        float: left;
+        text-align: right;
+        line-height: 50px;
+        padding-right: 20px;
+      }
+      input[type=text], input[type=passWord]{
+        width: 400px;
+        height: 50px;
+        padding: 0 20px;
+        border: 1px solid $borderColor;
+        border-radius: 4px;
+      }
+      input[type=text]:focus, input[type=passWord]:focus{
+        border-color: #00BA8F;
+      }
+      input[type=text].error_bor{
+        border-color: #f75f0c;
+      }
+
+      #verify{
+        width: 240px;
+        margin-right: 25px;
+      }
+      .verify{
+        width: 130px;
+        height: 50px;
+        background: #Fff;
+        color: #999999;
+        .col_fff{
+          color: #fff;
+        }
+
+      }
+      .btn_resend{
+        background-color: #00BA8F;
+        color: #fff;
+      }
+      .seconds{
+        background-color: #cccccc;
+        color: #999999;
+        border-color: #fff;
+      }
+      .btn_register{
+        width: 400px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        margin-left: 45px;
+        margin-top: 30px;
+      }
+    }
+  }
+}

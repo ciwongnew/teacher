@@ -1,0 +1,33 @@
+.progressBar {
+
+  .transitionM{
+  	transition: all 600ms ease-in;
+  -moz-transition:all 600ms ease-in; /* Firefox 4 */
+  -webkit-transition: all 600ms ease-in; /* Safari 和 Chrome */
+  -o-transition: all 600ms ease-in;
+  }
+
+
+  .prePage{ position:absolute; left:0; top:0; font-size:1.75em; color:#ffffff; font-family:"iconfont" !important; padding:0.4761904761904762em 0.7142857142857143em;}
+  .circleRun {
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      width: 90%;
+  }
+  // .surePass{ margin-top:2em; position:relative; width:240px; float:left;}
+  .surePass{ position:relative; float:left;}
+
+  .anyield{ width:100%; position:absolute; text-align:center; left:0;top:60%; height: 5.75em; margin-top: -2.25em; font-size:1em; z-index: 3;}
+  .anyield p:first-child{ color:#999999; font-size:12px; }
+  .anyield p:nth-child(2){ color:#00ba8f; font-size:24px; }
+
+
+  .clear:after{
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+  }
+}

@@ -1,0 +1,96 @@
+@charset "utf-8";
+.book{
+    width: 160px;
+    font: 14px $font-roboto;
+    color: #000;
+    position: relative;
+        .images{
+              display: block;
+              position: relative;
+              margin-bottom: 10px;
+              img{
+                width: 166px;
+                height: 238px;
+                // box-shadow: 2px 2px 2px #888888;
+              }
+              .paper_title{
+                width: 160px;
+                position: absolute;
+                top: 20px;
+                color: #fff;
+                text-align: left;
+                padding: 0 12px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 6;
+              }
+              .view_btn{
+                width: 80px;
+                height: 26px;
+                line-height: 26px;
+                display: inline-block;
+                color: #00BA8F;
+                border: 1px solid #00BA8F;
+                font-size: 12px;
+                border-radius: 4px;
+                text-align: center;
+                margin: 20px 40px;
+                cursor: pointer;
+              }
+         }
+         .defaultImg{
+            // background-image: url("./img/default.png");
+            background-image: url("../../assets/img/default.png");
+         }
+         i{
+            position: absolute;
+            top: 0px;
+            right: -35px;
+            width: 27px;
+            height: 27px;
+            display: inline-block;
+            background: url("../../assets/img/cancelTop.png") no-repeat;
+            cursor: pointer;
+         }
+         i:hover{
+           background: url("../../assets/img/setTop.png") no-repeat;
+         }
+         .isTop{
+           background: url("../../assets/img/isTop.png") no-repeat;
+         }
+        .bookMsg{
+            width: 160px;
+            // height: 130px;
+            margin-bottom: 30px;
+            h4{
+              font-size: 14px;
+              color: #666;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              font-weight: normal;
+              letter-spacing: 1px;
+            }
+            p{
+                color: #999;
+                font-size: 12px;
+                overflow: hidden; /*自动隐藏文字*/
+                text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                margin-top: 10px;
+            }
+          .clear:after{
+              content: ".";
+              height: 0;
+              visibility: hidden;
+              display: block;
+              clear: both;
+         }
+      }
+}

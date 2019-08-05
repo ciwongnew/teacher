@@ -1,0 +1,29 @@
+@charset "utf-8";
+.menuBanner{
+  vertical-align: middle;
+  width: 100%;
+  height: 30px;
+  color: #b8b8b8;
+  background-color: #f2f2f2;
+  font: 14px $font-roboto;
+  z-index: 90;
+    .menuContent{
+      width: 960px;
+      margin: 0 auto;
+      height: 30px;
+      line-height: 30px;
+      padding: 10px 0px;
+      ul{
+        li{
+          float: left;
+          span{
+            font:  14px $font-roboto;
+            color: #b8b8b8;
+            &.current{
+              color: #b8b8b8;
+            }
+          }
+        }
+      }
+    }
+}

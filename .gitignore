@@ -1,0 +1,13 @@
+.DS_Store
+.vscode
+node_modules/
+.idea/
+dist/
+distMobile/
+npm-debug.log
+yarn-error.log
+dev-mock.log
+local.config.js
+.npmrc
+.yarnrc
+package.json

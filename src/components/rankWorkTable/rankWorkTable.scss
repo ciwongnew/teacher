@@ -1,0 +1,136 @@
+.rankWorkTable{
+	 width: 100%;
+	 clear: both;
+	 margin-bottom: 50px;
+	 border:1px solid #e6e6e6;
+	 border-top:0;
+	 .socreTableL{
+	 	min-width: 480px;
+	 	background-color:#f8f8f8;
+	 	.tableFixed{
+	 		max-width: 480px;
+	 		left: auto;
+	 	}
+	 }
+	 .socreTableR{
+	 	    overflow-x: auto;
+			&::-webkit-scrollbar {display:none}
+			.tableFixed{
+				max-width: 418px;
+				overflow: hidden;
+				right: auto;
+				ul{
+					height: 59px;
+					line-height: 59px;
+					width: 500%;
+					transition: margin-left 1.5s;
+					li{
+						float: left;
+						height: 60px;
+						padding: 0 10px;
+						font-weight: 400;
+						text-align: center;
+						overflow: hidden;
+						// white-space: nowrap;
+						// text-overflow: ellipsis;
+					}
+				}
+			}
+			i{
+				display: block;
+				font: bold 18px 'SimHei';
+				height: 60px;
+				line-height: 60px;
+				width: 20px;
+				background-color: rgba(0,0,0,.1);
+				position: absolute;
+				color: #fff;
+				border-radius: $buttonBorderRadius;
+				text-align: center;
+				cursor: pointer;
+
+			}
+			.arrow-l{
+				left: 0px;
+				&:hover{
+					background-color: #00ba8f;
+				}
+			}
+			.arrow-r{
+				right: 0px;
+				&:hover{
+					background-color: #00ba8f;
+				}
+			}
+			.bgGray{
+				background-color: rgba(0,0,0,.6)
+			}
+	 }
+	.socreTableL,.socreTableR,.rankWorkApi{
+		border:0;
+	 	border-spacing: 0;
+	 	position: relative;
+	 	table{
+	 		border-spacing: 0;
+	 		width: 100%;
+	 		transition: margin-left 1.5s;
+	 		tbody{
+	 			tr{
+	 				td{
+	 					font-size: 14px;
+	 				}
+	 			}
+	 		}
+	 		tbody,thead{
+	 			tr{
+	 				height: 59px;
+	 				line-height: 59px;
+	 				justify-content: space-around;
+	 				@extend .grid;
+	 				td,th{
+	 					padding: 0 10px;
+	 					font-weight: 400;
+	 					text-align: center;
+	 					overflow: hidden;
+	 					@extend .cell;
+	 					.arrIcon{
+	 						img{
+	 							vertical-align: middle;
+	 						}
+	 					}
+	 				}
+	 				.btn-size{
+	 					width: 90px;
+	 					height: 32px;
+	 					padding:0px;
+	 					font-size: 14px;
+	 				}
+	 				.unSublime{
+	 					color: #FB5528;
+	 				}
+	 				.grayzi{
+	 					color: #999;
+	 				}
+	 				&:nth-child(odd){
+						// background-color:#F8F8F8;
+					}
+					&:nth-child(even){
+						// background-color:#ffffff;
+					}
+	 			}
+	 		}
+	 	}
+	 	.tableFixed{
+	 		position:fixed;
+	 		top:60px;
+	 	}
+	}
+	.rankWorkApi {
+	 	width: 100%;
+	 	.tableFixed{
+	 		top:0px;
+	 		right: 0px;
+	 		padding:0 30px;
+	 	}
+	 }
+}

@@ -1,0 +1,51 @@
+.homeWorkContent{
+  h4{
+    font-size: 18px;
+    padding-left: 3px;
+    font-weight: 500;
+  }
+  .mdlContent{
+
+    .main{
+      width: 100%;
+      position: relative;
+      background: #fff;
+      padding: 20px 25px 0 25px;
+      cursor: pointer;
+      .noChoose{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        display: inline-block;
+        background: url("../../assets/img/noCheck.png");
+        background-size: 100%;
+        left: 0px;
+        top: 20px;
+      }
+      .choose{
+        background: url("../../assets/img/check.png");
+      }
+      p{
+        display: inline-block;
+        width: 500px;
+        height: 30px;
+        font-size: 16px;
+        padding-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .publishedIcon{
+        position: absolute;
+        right: 0px;
+        top: 10px;
+      }
+    }
+  }
+  .show{
+    display: block;
+  }
+  .noShow{
+    display: none;
+  }
+}

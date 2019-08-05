@@ -1,0 +1,20 @@
+.area{
+	.clear:after{
+		content: ".";
+		visibility: hidden;
+		height: 0;
+		display: block;
+		clear: both;
+	}
+	div{
+		width: 160px;
+		height: 50px;
+		float: left;
+		margin-right: 20px;
+		.panel{
+			width: 145px;
+			max-height: 260px;
+			overflow: auto;
+		}
+	}
+}

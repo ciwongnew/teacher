@@ -1,0 +1,54 @@
+.footer{
+    position: relative;
+    font-size: 14px;
+    padding-left: 34px;
+    background: #fff;
+    // margin-top: -20px;
+    // margin-left: 30px;
+    p{
+      display: inline-block;
+      font-size: 12px;
+    }
+
+    .choice{
+      margin-top: 10px;
+      .write{
+        float: left;
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        color: #30c7a4;
+        border: 1px solid #30c7a4;
+        margin-right: 10px;
+        &:hover{
+          background-color: #00ba8f;
+          color: #fff;
+        }
+      }
+      .selectSpeek,.selectRead{
+        float: left;
+        .panel li{
+          padding: 5px 20px;
+          margin-bottom: 0px;
+        }
+      }
+      .selectSpeek{
+        width: 100px;
+        margin-right: 10px;
+      }
+      .selectRead{
+        width: 70px;
+        .panel li{
+          padding: 5px 22px;
+        }
+      }
+    }
+    .clear:after{
+         content: ".";
+         visibility: hidden;
+         height: 0;
+         display: block;
+         clear: both;
+    }
+  }

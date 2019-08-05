@@ -1,0 +1,31 @@
+.viewport{
+	width: 960px;
+	margin:0px auto;
+}
+
+.m-select-question{
+	position: fixed;
+	bottom:0;
+	padding: 15px 0;
+	width: 100%;
+	overflow: hidden;
+	background-color: #d5eef3;
+	line-height: 32px;
+	z-index: 9999;
+	&.relativeBox{
+		position: relative;
+		top:40px;
+		bottom:auto;
+	}
+	.common-width{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.m-l20{margin-left: 20px;}
+	.button{width: auto;padding:0 30px;}
+	.inline-block{display: inline-block;}
+}
+.notfond{
+  display: block;
+  margin: 200px auto 0;
+}
